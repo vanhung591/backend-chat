@@ -84,7 +84,7 @@ const UsersDataGridTableContainer = () => {
 
   useEffect(() => {
     loadDataList();
-  },[onDeleteUser])
+  },[])
 
   const columns = [
     {
