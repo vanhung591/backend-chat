@@ -67,7 +67,7 @@ const UsersDataGridTableContainer = () => {
   const onDeleteUser = React.useCallback((record: any) => {
     deleteUserById(`${record?.id}`).then(res => {
       if (res.status !== 200) return;
-      loadDataList()
+      loadDataList();
     })
   }, [])
 
@@ -83,8 +83,8 @@ const UsersDataGridTableContainer = () => {
   }
 
   useEffect(() => {
-    loadDataList()
-  }, [])
+    loadDataList();
+  },[onDeleteUser])
 
   const columns = [
     {
@@ -163,7 +163,7 @@ const UsersDataGridTableContainer = () => {
         return moment.unix(record?.value?._seconds).format(DATE_FORMAT.FULL);
       }
     },
-    // refs: column definition: https://mui.com/x/react-data-grid/column-definition/#column-types
+
     {
       field: 'actions',
       "headerName": "Actions",
@@ -189,10 +189,8 @@ const UsersDataGridTableContainer = () => {
     []
   );
 
-  const onUpdateRowError = React.useCallback((err: any) => console.log('log::err err', err), [])
-  // editing docs:  https://mui.com/x/react-data-grid/editing/
-
-  // example: https://mui.com/x/react-data-grid/editing/#AskConfirmationBeforeSave.tsx
+  const onUpdateRowError = React.useCallback((err: any) => console.log('err', err), [])
+ 
   return (
     <Box sx={{width: '100%'}}>
       <UserFormBuilderDialog onRefresh={loadDataList}/>
@@ -213,7 +211,6 @@ const UsersDataGridTableContainer = () => {
           components={{Toolbar: GridToolbar}}
           componentsProps={{
             toolbar: {
-              //refs: https://mui.com/x/react-data-grid/filtering/#quick-filter
               showQuickFilter: true,
               quickFilterProps: {debounceMs: 500},
             }
