@@ -1,5 +1,5 @@
 import {NextApiRequest, NextApiResponse} from "next";
-import {firestoreDeleteRoleById, firestoreUpdateRoleById} from "services/firestore/roles.service";
+import {firestoreDeleteRoleById, firestoreUpdateRoleById} from "../../../services/firestore/roles.service";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 

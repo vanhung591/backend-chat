@@ -1,9 +1,9 @@
 /**
  *
- * @param str
+ * @param str: any
  * @returns {string|*}
  */
-const removeAscent = (str) => {
+const removeAscent = (str: any) => {
   if (str === null || str === undefined) return str;
   str = str.toLowerCase();
   str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
@@ -21,7 +21,7 @@ const removeAscent = (str) => {
  * @param str
  * @returns {boolean}
  */
-export const isVietnameseText = (str) => {
+export const isVietnameseText = (str: any) => {
   if (!str) return false;
   if (typeof str !== "string") return false;
 

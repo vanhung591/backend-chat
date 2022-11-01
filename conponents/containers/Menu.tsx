@@ -13,7 +13,7 @@ import MuiDrawer from '@mui/material/Drawer';
 import {styled, useTheme, Theme, CSSObject} from "@mui/material/styles";
 import {MenuOpts, SubMenuOpts} from "../../src/route-options";
 import Link from "next/link";
-import {getIconByName} from "conponents/elements/AppIcon";
+import {getIconByName} from "../../conponents/elements/AppIcon";
 
 type MenuPropType = {
   open: boolean;
@@ -132,6 +132,5 @@ export const DrawerHeader = styled('div')(({theme}) => ({
   alignItems: 'center',
   justifyContent: 'flex-end',
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));

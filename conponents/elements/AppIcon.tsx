@@ -5,7 +5,6 @@ import FolderSharedIcon from '@mui/icons-material/FolderShared';
 import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import PeopleIcon from '@mui/icons-material/People';
 
-//refs: https://mui.com/material-ui/material-icons/
 export const getIconByName = (iconName: string) => {
   switch (iconName) {
     case "channel":

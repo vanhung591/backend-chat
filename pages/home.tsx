@@ -1,14 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import AppLayout from "conponents/containers/AppLayout";
+import AppLayout from "../conponents/containers/AppLayout";
 import Head from "next/head";
 import Box from "@mui/material/Box";
 import {Grid} from "@mui/material";
-import SummaryCard from "conponents/elements/SummaryCard";
+import SummaryCard from "../conponents/elements/SummaryCard";
 import DataSaverOffIcon from '@mui/icons-material/DataSaverOff';
 import Typography from "@mui/material/Typography";
-import {getListDataAnalyticsByMetric} from "services/app/analytics.app";
-import RoleByUserChart from "conponents/containers/analytics/RoleByUserChart";
-import MessageByChannelChart from "conponents/containers/analytics/MessageByChannelChart";
+import {getListDataAnalyticsByMetric} from "../services/app/analytics.app";
+import RoleByUserChart from "../conponents/containers/analytics/RoleByUserChart";
+import MessageByChannelChart from "../conponents/containers/analytics/MessageByChannelChart";
 
 const HomePage = () => {
   const [metrics, setMetrics] = useState<any>({});

@@ -1,5 +1,5 @@
 import {NextApiRequest, NextApiResponse} from "next";
-import {firestoreGetListOfChannels, firestorePostCreateAChannel} from "services/firestore/channels.service";
+import {firestoreGetListOfChannels, firestorePostCreateAChannel} from "../../../services/firestore/channels.service";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 

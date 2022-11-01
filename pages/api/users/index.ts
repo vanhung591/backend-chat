@@ -1,5 +1,5 @@
 import {NextApiRequest, NextApiResponse} from "next";
-import {firestoreGetListOfUsers, firestorePostCreateAUser} from "services/firestore/users.service";
+import {firestoreGetListOfUsers, firestorePostCreateAUser} from "../../../services/firestore/users.service";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 

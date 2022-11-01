@@ -1,5 +1,5 @@
 import {NextApiRequest, NextApiResponse} from "next";
-import {firestoreGetDataAnalytics} from "services/firestore/analytics.service"
+import {firestoreGetDataAnalytics} from "../../services/firestore/analytics.service";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 

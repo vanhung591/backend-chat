@@ -15,9 +15,9 @@ import {
 import Box from "@mui/material/Box";
 import moment from "moment";
 import {DATE_FORMAT} from "../src/config/app.constant";
-import {deleteChannelById, getListOfChannel, updateChannelById} from "services/app/channels.app";
+import {deleteChannelById, getListOfChannel, updateChannelById} from "../services/app/channels.app";
 import {ChannelDataModel} from "../src/models/ChannelsDTO";
-import ChannelFormBuilderDialog from "conponents/containers/channels/ChannelFormBuilderDialog";
+import ChannelFormBuilderDialog from "../conponents/containers/channels/ChannelFormBuilderDialog";
 
 export default function ChannelsPage() {
 
@@ -84,14 +84,12 @@ const ChannelDataGridTableContainer = () => {
         return moment.unix(record?.value?._seconds).format(DATE_FORMAT.FULL);
       }
     },
-    // refs: column definition: https://mui.com/x/react-data-grid/column-definition/#column-types
     {
       field: 'actions',
       "headerName": "Actions",
       type: 'actions',
       width: 200,
       getActions: (param: GridRowParams) => [
-        //@ts-ignore
         <GridActionsCellItem key={"delete"} icon={<DeleteIcon/>} onClick={() => onDeleteChannel(param)}
                              label="Delete"/>,
       ]
@@ -112,10 +110,7 @@ const ChannelDataGridTableContainer = () => {
     [],
   );
 
-  const onUpdateRowError = React.useCallback((err: any) => console.log('log::err err', err), [])
-  // editing docs:  https://mui.com/x/react-data-grid/editing/
-
-  // example: https://mui.com/x/react-data-grid/editing/#AskConfirmationBeforeSave.tsx
+  const onUpdateRowError = React.useCallback((err: any) => console.log('err', err), [])
   return (
     <Box sx={{width: '100%'}}>
       <ChannelFormBuilderDialog  onRefresh={loadDataList} />
@@ -133,7 +128,6 @@ const ChannelDataGridTableContainer = () => {
           components={{Toolbar: GridToolbar}}
           componentsProps={{
             toolbar: {
-              //refs: https://mui.com/x/react-data-grid/filtering/#quick-filter
               showQuickFilter: true,
               quickFilterProps: {debounceMs: 500},
             }

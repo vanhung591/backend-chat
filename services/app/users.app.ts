@@ -1,5 +1,5 @@
-import {callApi} from "services/callApi";
-import {USER_ENDPOINT} from "services/app/endpoint.constant";
+import {callApi} from "../../services/callApi";
+import {USER_ENDPOINT} from "../../services/app/endpoint.constant";
 import {UserDataModel, UserPayloadModel} from "../../src/models/UsersDTO";
 
 export const createNewAUser = (payload: UserPayloadModel) => {

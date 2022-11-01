@@ -8,7 +8,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import {Controller, useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import {createNewAUser} from "services/app/users.app";
+import {createNewAUser} from "../../../services/app/users.app";
 import { UserFormBuilderDialogPropType} from "../../../src/models/UsersDTO";
 
 const userSchema = yup.object({

@@ -8,7 +8,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import {Controller, useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import {createNewARole} from "services/app/roles.app";
+import {createNewARole} from "../../../services/app/roles.app";
 import {ROLE_ENUM, RoleFormBuilderDialogPropType} from "../../../src/models/RolesDTO";
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';

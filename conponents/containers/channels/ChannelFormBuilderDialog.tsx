@@ -8,7 +8,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import {Controller, useForm} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import {createNewAChannel} from "services/app/channels.app";
+import {createNewAChannel} from "../../../services/app/channels.app";
 import {ChannelFormBuilderDialogPropType} from "../../../src/models/ChannelsDTO";
 
 const channelSchema = yup.object({

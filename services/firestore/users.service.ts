@@ -14,7 +14,6 @@ export const firestorePostCreateAUser = async (payload: UserPayloadModel) => {
 
 export const firestoreGetListOfUsers = async () => {
   let users: any[] = [];
-  // refs: https://firebase.google.com/docs/firestore/query-data/get-data
   const querySnapshot = await firestoreAdmin.collection(DB_NAME.USERS).get()
   querySnapshot.forEach((doc: any) => {
     users.push({

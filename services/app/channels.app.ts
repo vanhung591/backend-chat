@@ -1,5 +1,5 @@
-import {callApi} from "services/callApi";
-import {CHANNEL_ENDPOINT} from "services/app/endpoint.constant";
+import {callApi} from "../../services/callApi";
+import {CHANNEL_ENDPOINT} from "../../services/app/endpoint.constant";
 import {ChannelDataModel, ChannelPayloadModel} from "../../src/models/ChannelsDTO";
 
 export const createNewAChannel = (channelPayload: ChannelPayloadModel) => {

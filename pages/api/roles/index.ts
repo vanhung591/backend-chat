@@ -1,5 +1,5 @@
 import {NextApiRequest, NextApiResponse} from "next";
-import {firestoreGetListOfRoles, firestorePostCreateARole} from "services/firestore/roles.service";
+import {firestoreGetListOfRoles, firestorePostCreateARole} from "../../../services/firestore/roles.service";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 

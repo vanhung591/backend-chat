@@ -15,7 +15,6 @@ export const firestorePostCreateAChannel = async (channelPayload: ChannelPayload
 
 export const firestoreGetListOfChannels = async () => {
   let channels: any[] = [];
-  // refs: https://firebase.google.com/docs/firestore/query-data/get-data
   const querySnapshot = await firestoreAdmin.collection(DB_NAME.CHANNELS).get()
   querySnapshot.forEach((doc: any) => {
     channels.push({

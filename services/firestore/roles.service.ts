@@ -14,7 +14,6 @@ export const firestorePostCreateARole = async (rolePayload: RolePayloadModel) =>
 
 export const firestoreGetListOfRoles = async () => {
   let roles: any[] = [];
-  // refs: https://firebase.google.com/docs/firestore/query-data/get-data
   const querySnapshot = await firestoreAdmin.collection(DB_NAME.ROLES).get()
   querySnapshot.forEach((doc: any) => {
     roles.push({

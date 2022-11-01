@@ -1,5 +1,5 @@
-import {callApi} from "services/callApi";
-import {ROLE_ENDPOINT} from "services/app/endpoint.constant";
+import {callApi} from "../../services/callApi";
+import {ROLE_ENDPOINT} from "../../services/app/endpoint.constant";
 import {RoleDataModel, RolePayloadModel} from "../../src/models/RolesDTO";
 
 export const createNewARole = (payload: RolePayloadModel) => {

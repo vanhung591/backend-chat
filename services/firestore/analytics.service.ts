@@ -1,6 +1,6 @@
-import {firestoreGetListOfUsers} from "services/firestore/users.service";
-import {firestoreGetListOfChannels} from "services/firestore/channels.service";
-import {firestoreGetListOfRoles} from "services/firestore/roles.service";
+import {firestoreGetListOfUsers} from "../../services/firestore/users.service";
+import {firestoreGetListOfChannels} from "../../services/firestore/channels.service";
+import {firestoreGetListOfRoles} from "../../services/firestore/roles.service";
 import {firestoreAdmin} from "../../src/config/firebase";
 import {DB_NAME} from "../../src/config/firebase.constant";
 
@@ -52,10 +52,6 @@ const firestoreGetMessageMetric = async (channels: any[]) => {
 
     total = total + subMessageCollection.size;
     c.total_message = subMessageCollection.size;
-
-    // subMessageCollection.forEach(m => {
-    //
-    // })
   }
 
   return {
