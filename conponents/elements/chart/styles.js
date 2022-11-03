@@ -1,7 +1,5 @@
-// @mui
 import { alpha, useTheme } from '@mui/material/styles';
 import { GlobalStyles } from '@mui/material';
-// utils
 
 export function bgBlur(props) {
   const color = props?.color || '#000000';
@@ -35,8 +33,6 @@ export function bgBlur(props) {
   };
 }
 
-// ----------------------------------------------------------------------
-
 export default function StyledChart() {
   const theme = useTheme();
 
@@ -44,7 +40,6 @@ export default function StyledChart() {
     <GlobalStyles
       styles={{
         '.apexcharts-canvas': {
-          // Tooltip
           '.apexcharts-xaxistooltip': {
             ...bgBlur({ color: theme.palette.background.default }),
             border: 0,
@@ -68,7 +63,6 @@ export default function StyledChart() {
             },
           },
 
-          // Legend
           '.apexcharts-legend': {
             padding: 0,
           },

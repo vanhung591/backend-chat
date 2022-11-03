@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useCallback} from 'react';
 import Typography from '@mui/material/Typography';
 import AppLayout from "../conponents/containers/AppLayout";
 import Head from "next/head";
@@ -64,7 +64,7 @@ const UsersDataGridTableContainer = () => {
     })
   }
 
-  const onDeleteUser = React.useCallback((record: any) => {
+  const onDeleteUser = useCallback((record: any) => {
     deleteUserById(`${record?.id}`).then(res => {
       if (res.status !== 200) return;
       loadDataList();
@@ -177,7 +177,7 @@ const UsersDataGridTableContainer = () => {
     }
   ]
 
-  const onUpdateRow = React.useCallback(
+  const onUpdateRow = useCallback(
     async (newRow: GridRowModel) => {
       let payloadUpdate: UserDataModel = {
         id: newRow.id,
@@ -189,7 +189,7 @@ const UsersDataGridTableContainer = () => {
     []
   );
 
-  const onUpdateRowError = React.useCallback((err: any) => console.log('err', err), [])
+  const onUpdateRowError = useCallback((err: any) => console.log('err', err), [])
  
   return (
     <Box sx={{width: '100%'}}>
